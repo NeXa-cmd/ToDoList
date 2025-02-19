@@ -84,8 +84,6 @@ class ToDoList
                 cout << "Task " << i << " name : " << dbTask.getName() << endl;
                 if(dbTask.getDescription() != "") cout << "Task " << i << " Description : " << dbTask.getDescription() << endl;
                 cout << "Task " << i << " Priority : " <<  PriorityToString(dbTask.getPriority()) << endl;
-                cout << "Task " << i << " Priority : " <<  PriorityToString(dbTask.getPriority()) << endl;
-                cout << "Task " << i << " Priority : " <<  PriorityToString(dbTask.getPriority()) << endl;
                 cout << "-----------------------------" << endl;
             }
         }
