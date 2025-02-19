@@ -1,3 +1,4 @@
+#pragma once
 class Task {
     private:
         string name;
@@ -26,17 +27,9 @@ class Task {
             return true;
         }
         bool setPriority(Priority priority){
-            if(priority == Priority::RANDOM) return false;
-
+            if(priority == RANDOM) return false;
+            
             this->priority = priority;
             return true;
         }
-
-};
-
-enum Priority {
-    HIGH,
-    MEDIUM,
-    LOW,
-    RANDOM
 };

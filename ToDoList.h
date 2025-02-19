@@ -1,3 +1,4 @@
+#pragma once
 class ToDoList
 {
     private:
@@ -22,7 +23,7 @@ class ToDoList
             if(tasks.size() == 0) return false;
             
             for(int i=0; i<tasks.size(); i++){
-                if(tasks[i].getName() == "" && tasks[i].getPriority() == Priority::RANDOM) {
+                if(tasks[i].getName() == "" && tasks[i].getPriority() == RANDOM) {
                     tasks.erase(tasks.begin() + i);
                     continue;
                 };
@@ -32,7 +33,7 @@ class ToDoList
             return true;
         }
         bool addTask(Task task){
-            if(task.getName() == "" && task.getPriority() == Priority::RANDOM) return false;
+            if(task.getName() == "" && task.getPriority() == RANDOM) return false;
 
             for(Task dbTask : tasks) if(task.getName() == dbTask.getName()) return false;
             
@@ -53,7 +54,7 @@ class ToDoList
         }
         bool editTask(string name, Task task) {
             if(name == "") return false;
-            if(task.getName() == "" && task.getPriority() == Priority::RANDOM) return false;
+            if(task.getName() == "" && task.getPriority() == RANDOM) return false;
 
             for(int i = 0 ; i < tasks.size() ; i++ ){
                 if(tasks[i].getName() == name) {
