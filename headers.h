@@ -6,10 +6,10 @@
 using namespace std;
 
 enum Priority {
-    HIGH,
-    MEDIUM,
+    RANDOM,
     LOW,
-    RANDOM
+    MEDIUM,
+    HIGH  
 };
 
 #include "Task.h"

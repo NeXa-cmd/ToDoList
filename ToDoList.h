@@ -4,6 +4,15 @@ class ToDoList
     private:
         string name;
         vector<Task> tasks;
+        string PriorityToString(Priority priority) {
+            switch (priority) {
+                case 0 : return "RANDOM" ;
+                case 1 : return "LOW" ;
+                case 2 : return "MEDIUM" ;
+                case 3 : return "HIGH" ;
+                default : return "RANDOM" ;
+            }    
+        }
     public:
         ToDoList(): name("untitled") , tasks(vector<Task> ()) {}
         ToDoList(string name, vector<Task> task): name(name), tasks(task) {}
@@ -69,11 +78,12 @@ class ToDoList
         }
         void showData(){
             int i = 1;
+            cout << "-----------------------------" << endl;
             cout << "ToDoList name : " << name << endl;
             for(Task dbTask : tasks) {
-                cout << "Task " << i << " name :" << dbTask.getName() << endl;
-                if(dbTask.getDescription() != "") cout << "Task " << i << " Description :" << dbTask.getDescription() << endl;
-                cout << "Task " << i << " Priority :" << dbTask.getPriority() << endl;
+                cout << "Task " << i << " name : " << dbTask.getName() << endl;
+                if(dbTask.getDescription() != "") cout << "Task " << i << " Description : " << dbTask.getDescription() << endl;
+                cout << "Task " << i << " Priority : " <<  PriorityToString(dbTask.getPriority()) << endl;
                 cout << "-----------------------------" << endl;
             }
         }
