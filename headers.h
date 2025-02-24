@@ -14,3 +14,5 @@ enum Priority {
 
 #include "Task.h"
 #include "ToDoList.h"
+#include "Menu.h"
+#include "Menufunctions.h"
